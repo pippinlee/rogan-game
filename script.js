@@ -246,7 +246,7 @@ $(function(){
     $('ul').append(`<li class="flex-items q${i}">
     <section id="container">
       <section id="cover">
-        <a href="javascript:void(0)" class="play vinyl${i}" onclick="${listOfClips[i].clip_object}" >
+        <a href="javascript:void(0)" class="play vinyl${i}" onclick="${shuffledListOfClips[i].clip_object}" >
           <section id="play"></section>
           <section id="pause"></section>
         </a>
@@ -278,13 +278,13 @@ $(function(){
     }
     $(this).toggleClass('selected')
     if ($(this).is('#correct') ) {
-      $(selectedAnswerBox).text('✅ Correct')
+      $(selectedAnswerBox).html('<img class="answer-icon" src="./media/images/checkmark.svg"/> Correct!')
     } else {
-      $(selectedAnswerBox).text('❌ Nope')
+      $(selectedAnswerBox).html('<img class="answer-icon" src="./media/images/cross.svg"/> Nope!')
     }
 
     if (!$(this).hasClass('selected')) {
-      $(selectedAnswerBox).text('')
+      $(selectedAnswerBox).html('')
     }
   });
 

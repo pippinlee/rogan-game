@@ -307,4 +307,10 @@ body #cover a.pause #pause {
 
 .validate-answer {
   margin-top: 10px;
+  font-weight: 700;
+}
+
+.answer-icon {
+  width: 15px;
+  margin-right: 5px;
 }
