@@ -243,10 +243,10 @@ $(function(){
       buttonCreation = `<button id="wrong">Joe Rogan</button>
       <button id="correct">Faux Rogan</button>`
     }
-    $('ul').append(`<li class="flex-items q${i}">
+    $('ul').append(`<li class="flex-items q${shuffledListOfClips[i].clip_index}">
     <section id="container">
       <section id="cover">
-        <a href="javascript:void(0)" class="play vinyl${i}" onclick="${shuffledListOfClips[i].clip_object}" >
+        <a href="javascript:void(0)" class="play vinyl${shuffledListOfClips[i].clip_index}" onclick="${shuffledListOfClips[i].clip_object}" >
           <section id="play"></section>
           <section id="pause"></section>
         </a>
@@ -294,42 +294,50 @@ var listOfClips = [
   {
     'path': '/media/real/1.wav',
     'real': true,
-    'clip_object': 'vinyl0.playPause()'
+    'clip_object': 'vinyl0.playPause()',
+    'clip_index': 0
   },
   {
     'path': '/media/real/2.wav',
     'real': true,
-    'clip_object': 'vinyl1.playPause()'
+    'clip_object': 'vinyl1.playPause()',
+    'clip_index': 1
   },
   {
     'path': '/media/real/3.wav',
     'real': true,
-    'clip_object': 'vinyl2.playPause()'
+    'clip_object': 'vinyl2.playPause()',
+    'clip_index': 2
   },
   {
     'path': '/media/real/4.wav',
     'real': true,
-    'clip_object': 'vinyl3.playPause()'
+    'clip_object': 'vinyl3.playPause()',
+    'clip_index': 3
   },
   {
     'path': '/media/fake/1.wav',
     'real': false,
-    'clip_object': 'vinyl4.playPause()'
+    'clip_object': 'vinyl4.playPause()',
+    'clip_index': 4
   },
   {
     'path': '/media/fake/2.wav',
     'real': false,
-    'clip_object': 'vinyl5.playPause()'
+    'clip_object': 'vinyl5.playPause()',
+    'clip_index': 5
   },
   {
     'path': '/media/fake/3.wav',
     'real': false,
-    'clip_object': 'vinyl6.playPause()'
+    'clip_object': 'vinyl6.playPause()',
+    'clip_index': 6
   },
   {
     'path': '/media/fake/4.wav',
     'real': false,
-    'clip_object': 'vinyl7.playPause()'
+    'clip_object': 'vinyl7.playPause()',
+    'clip_index': 7
   }
 ];
 
@@ -344,5 +352,5 @@ const shuffleArray = function(array) {
   return a;
 };
 
-// shuffledListOfClips = shuffleArray(listOfClips)
-shuffledListOfClips = listOfClips
+shuffledListOfClips = shuffleArray(listOfClips)
+// shuffledListOfClips = listOfClips
