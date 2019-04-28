@@ -192,6 +192,13 @@ input[type="button"]::-moz-focus-inner {
   border: 0;
 }
 
+@media only screen and (max-device: 480px){
+  a:hover {
+    color: #fff;
+    background-color: #2f2f2f;
+  }
+}
+
 /* audio-card styling */
 
 body #container {
