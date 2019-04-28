@@ -65,9 +65,9 @@ $(function(){
 
     playPause : function() {
         if($('.q2 #cover a').hasClass('play')) {
-          vinyl1.play();
+          vinyl2.play();
         } else if($('.q2 #cover a').hasClass('pause')) {
-          vinyl1.pause();
+          vinyl2.pause();
         }
     },
 
@@ -85,7 +85,7 @@ $(function(){
         $('.q2 #cover a').removeClass('pause').addClass('play');
         $('.q2 #container').removeClass('open');
         $('.q2 #vinyl').removeClass('animated');
-        vinyl1.song.pause();
+        vinyl2.song.pause();
     },
   };
 
@@ -118,8 +118,37 @@ $(function(){
     },
   };
 
-  vinyl5 = {
+  vinyl4 = {
     song: new Audio('media/fake/1.wav'),
+
+    playPause : function() {
+        if($('.q4 #cover a').hasClass('play')) {
+          vinyl4.play();
+        } else if($('.q4 #cover a').hasClass('pause')) {
+          vinyl4.pause();
+        }
+    },
+
+    play : function() {
+        $('.q4 #cover a').removeClass('play').addClass('pause');
+        $('.q4 #container').addClass('open');
+        $('.q4 #vinyl').addClass('animated');
+        vinyl4.song.play();
+        vinyl4.song.onended = function() {
+          vinyl4.playPause();
+        }
+    },
+
+    pause : function() {
+        $('.q4 #cover a').removeClass('pause').addClass('play');
+        $('.q4 #container').removeClass('open');
+        $('.q4 #vinyl').removeClass('animated');
+        vinyl4.song.pause();
+    },
+  };
+
+  vinyl5 = {
+    song: new Audio('media/fake/2.wav'),
 
     playPause : function() {
         if($('.q5 #cover a').hasClass('play')) {
@@ -148,7 +177,7 @@ $(function(){
   };
 
   vinyl6 = {
-    song: new Audio('media/fake/2.wav'),
+    song: new Audio('media/fake/3.wav'),
 
     playPause : function() {
         if($('.q6 #cover a').hasClass('play')) {
@@ -177,7 +206,7 @@ $(function(){
   };
 
   vinyl7 = {
-    song: new Audio('media/fake/3.wav'),
+    song: new Audio('media/fake/4.wav'),
 
     playPause : function() {
         if($('.q7 #cover a').hasClass('play')) {
@@ -205,35 +234,6 @@ $(function(){
     },
   };
 
-  vinyl8 = {
-    song: new Audio('media/fake/4.wav'),
-
-    playPause : function() {
-        if($('.q8 #cover a').hasClass('play')) {
-          vinyl8.play();
-        } else if($('.q8 #cover a').hasClass('pause')) {
-          vinyl8.pause();
-        }
-    },
-
-    play : function() {
-        $('.q8 #cover a').removeClass('play').addClass('pause');
-        $('.q8 #container').addClass('open');
-        $('.q8 #vinyl').addClass('animated');
-        vinyl8.song.play();
-        vinyl8.song.onended = function() {
-          vinyl8.playPause();
-        }
-    },
-
-    pause : function() {
-        $('.q8 #cover a').removeClass('pause').addClass('play');
-        $('.q8 #container').removeClass('open');
-        $('.q8 #vinyl').removeClass('animated');
-        vinyl1.song.pause();
-    },
-  };
-
   for (var i=0; i < shuffledListOfClips.length;i++){
     var buttonCreation;
     if (shuffledListOfClips[i].real === true) {
@@ -246,7 +246,7 @@ $(function(){
     $('ul').append(`<li class="flex-items q${i}">
     <section id="container">
       <section id="cover">
-        <a href="javascript:void(0)" class="play vinyl${i}" onclick="${shuffledListOfClips[i].clip_object}" >
+        <a href="javascript:void(0)" class="play vinyl${i}" onclick="${listOfClips[i].clip_object}" >
           <section id="play"></section>
           <section id="pause"></section>
         </a>
@@ -260,9 +260,10 @@ $(function(){
     </li>`)
   }
 
-  $('.play').click(function(){
-    vinyl_item = $(this).attr("class").split(' ')[0];
-  });
+  // $('.play').click(function(){
+  //   vinyl_item = $(this).attr("class").split(' ')[0];
+  //   console.log(vinyl_item)
+  // });
 
   $('button').click(function(){
     button0 = $(this).parent().children()[0]
@@ -313,22 +314,22 @@ var listOfClips = [
   {
     'path': '/media/fake/1.wav',
     'real': false,
-    'clip_object': 'vinyl5.playPause()'
+    'clip_object': 'vinyl4.playPause()'
   },
   {
     'path': '/media/fake/2.wav',
     'real': false,
-    'clip_object': 'vinyl6.playPause()'
+    'clip_object': 'vinyl5.playPause()'
   },
   {
     'path': '/media/fake/3.wav',
     'real': false,
-    'clip_object': 'vinyl7.playPause()'
+    'clip_object': 'vinyl6.playPause()'
   },
   {
     'path': '/media/fake/4.wav',
     'real': false,
-    'clip_object': 'vinyl8.playPause()'
+    'clip_object': 'vinyl7.playPause()'
   }
 ];
 
@@ -343,4 +344,5 @@ const shuffleArray = function(array) {
   return a;
 };
 
-shuffledListOfClips = shuffleArray(listOfClips)
+// shuffledListOfClips = shuffleArray(listOfClips)
+shuffledListOfClips = listOfClips
