@@ -260,10 +260,6 @@ $(function(){
     </li>`)
   }
 
-  // $('.play').click(function(){
-  //   vinyl_item = $(this).attr("class").split(' ')[0];
-  //   console.log(vinyl_item)
-  // });
 
   $('button').click(function(){
     button0 = $(this).parent().children()[0]
@@ -353,4 +349,3 @@ const shuffleArray = function(array) {
 };
 
 shuffledListOfClips = shuffleArray(listOfClips)
-// shuffledListOfClips = listOfClips

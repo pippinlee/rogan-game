@@ -197,6 +197,10 @@ input[type="button"]::-moz-focus-inner {
     color: #fff;
     background-color: #2f2f2f;
   }
+  button:visited {
+    background-color: rgb(74, 65, 65);
+    color: #FFB463;
+  }
 }
 
 /* audio-card styling */
