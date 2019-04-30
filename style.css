@@ -201,6 +201,13 @@ input[type="button"]::-moz-focus-inner {
     background-color: rgb(74, 65, 65);
     color: #FFB463;
   }
+  button.selected {
+    color: #2f2a2a;
+    background-color: #FFB463;
+    outline: none;
+    font-weight: 700;
+    text-shadow: none;
+  }
 }
 
 /* audio-card styling */
