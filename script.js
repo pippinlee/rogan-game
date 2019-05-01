@@ -119,7 +119,7 @@ $(function(){
   };
 
   vinyl4 = {
-    song: new Audio('media/fake/1.wav'),
+    song: new Audio('media/fake/1-16bit.wav'),
 
     playPause : function() {
         if($('.q4 #cover a').hasClass('play')) {
@@ -148,7 +148,7 @@ $(function(){
   };
 
   vinyl5 = {
-    song: new Audio('media/fake/2.wav'),
+    song: new Audio('media/fake/2-16bit.wav'),
 
     playPause : function() {
         if($('.q5 #cover a').hasClass('play')) {
@@ -177,7 +177,7 @@ $(function(){
   };
 
   vinyl6 = {
-    song: new Audio('media/fake/3.wav'),
+    song: new Audio('media/fake/3-16bit.wav'),
 
     playPause : function() {
         if($('.q6 #cover a').hasClass('play')) {
@@ -206,7 +206,7 @@ $(function(){
   };
 
   vinyl7 = {
-    song: new Audio('media/fake/4.wav'),
+    song: new Audio('media/fake/4-16bit.wav'),
 
     playPause : function() {
         if($('.q7 #cover a').hasClass('play')) {
