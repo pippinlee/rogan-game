@@ -262,7 +262,7 @@ $(function(){
 
 
   $('button').click(function(){
-    ga('send', 'event', 'Button', 'click', 'Rogan Game');
+    gtag('send', 'event', 'Button', 'click', 'Rogan Game');
     console.log(ga.q);
     button0 = $(this).parent().children()[0]
     button1 = $(this).parent().children()[1]
