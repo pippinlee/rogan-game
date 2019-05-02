@@ -262,8 +262,6 @@ $(function(){
 
 
   $('button').click(function(){
-    // gtag('send', 'event', 'Button', 'click', 'Rogan Game');
-    gtag('event', 'Click Rogan button', {'event_category': 'Rogan game','event_label': 'Rogan game question button'});
 
     button0 = $(this).parent().children()[0]
     button1 = $(this).parent().children()[1]
@@ -271,15 +269,29 @@ $(function(){
     button1Status = $(button1).hasClass('selected')
     selectedStatus = $(this).hasClass('selected')
     selectedAnswerBox = $(this).parent().siblings()[1]
+    answeredAlready = $(selectedAnswerBox).html()
+    correctHTML = '<img class="answer-icon" src="./media/images/checkmark.svg"/> Correct!'
+    incorrectHTML = '<img class="answer-icon" src="./media/images/cross.svg"/> Nope!'
+
     if (!selectedStatus && (button0Status || button1Status)) {
       $(this).toggleClass('selected')
       $(this).parent().children().toggleClass('selected')
     }
     $(this).toggleClass('selected')
     if ($(this).is('#correct') ) {
-      $(selectedAnswerBox).html('<img class="answer-icon" src="./media/images/checkmark.svg"/> Correct!')
+        $(selectedAnswerBox).html(correctHTML)
+      if (answeredAlready === correctHTML || answeredAlready === incorrectHTML){
+      } else {
+        $(selectedAnswerBox).html(correctHTML)
+        gtag('event', 'Click Rogan button', {'event_category': 'Correct','event_label': 'Rogan game question button'});
+      }
     } else {
-      $(selectedAnswerBox).html('<img class="answer-icon" src="./media/images/cross.svg"/> Nope!')
+      if (answeredAlready === correctHTML || answeredAlready === incorrectHTML){
+        $(selectedAnswerBox).html(incorrectHTML)
+      } else {
+        $(selectedAnswerBox).html(incorrectHTML)
+        gtag('event', 'Click Rogan button', {'event_category': 'Wrong','event_label': 'Rogan game question button'});
+      }
     }
 
     if (!$(this).hasClass('selected')) {
