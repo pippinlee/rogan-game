@@ -237,11 +237,11 @@ $(function(){
   for (var i=0; i < shuffledListOfClips.length;i++){
     var buttonCreation;
     if (shuffledListOfClips[i].real === true) {
-      buttonCreation = `<button id="correct">Joe Rogan</button>
-      <button id="wrong">Faux Rogan</button>`
+      buttonCreation = `<button class="${shuffledListOfClips[i].file}" id="correct">Joe Rogan</button>
+      <button id="wrong" class="${shuffledListOfClips[i].file}">Faux Rogan</button>`
     } else {
-      buttonCreation = `<button id="wrong">Joe Rogan</button>
-      <button id="correct">Faux Rogan</button>`
+      buttonCreation = `<button class="${shuffledListOfClips[i].file}" id="wrong">Joe Rogan</button>
+      <button id="correct" class="${shuffledListOfClips[i].file}">Faux Rogan</button>`
     }
     $('ul').append(`<li class="flex-items q${shuffledListOfClips[i].clip_index}">
     <section id="container">
@@ -272,6 +272,8 @@ $(function(){
     answeredAlready = $(selectedAnswerBox).html()
     correctHTML = '<img class="answer-icon" src="./media/images/checkmark.svg"/> Correct!'
     incorrectHTML = '<img class="answer-icon" src="./media/images/cross.svg"/> Nope!'
+    filename = $(this).attr("class");
+    console.log(filename)
 
     if (!selectedStatus && (button0Status || button1Status)) {
       $(this).toggleClass('selected')
@@ -283,14 +285,14 @@ $(function(){
       if (answeredAlready === correctHTML || answeredAlready === incorrectHTML){
       } else {
         $(selectedAnswerBox).html(correctHTML)
-        gtag('event', 'Click Rogan button', {'event_category': 'Correct','event_label': 'Rogan game question button'});
+        gtag('event', 'Click Rogan button', {'event_category': 'Rogan Game','event_label': filename});
       }
     } else {
       if (answeredAlready === correctHTML || answeredAlready === incorrectHTML){
         $(selectedAnswerBox).html(incorrectHTML)
       } else {
         $(selectedAnswerBox).html(incorrectHTML)
-        gtag('event', 'Click Rogan button', {'event_category': 'Wrong','event_label': 'Rogan game question button'});
+        gtag('event', 'Click Rogan button', {'event_category': 'Rogan Game','event_label': filename});
       }
     }
 
@@ -303,48 +305,56 @@ $(function(){
 
 var listOfClips = [
   {
+    'file': 'real-1',
     'path': '/media/real/1.wav',
     'real': true,
     'clip_object': 'vinyl0.playPause()',
     'clip_index': 0
   },
   {
+    'file': 'real-2',
     'path': '/media/real/2.wav',
     'real': true,
     'clip_object': 'vinyl1.playPause()',
     'clip_index': 1
   },
   {
+    'file': 'real-3',
     'path': '/media/real/3.wav',
     'real': true,
     'clip_object': 'vinyl2.playPause()',
     'clip_index': 2
   },
   {
+    'file': 'real-4',
     'path': '/media/real/4.wav',
     'real': true,
     'clip_object': 'vinyl3.playPause()',
     'clip_index': 3
   },
   {
+    'file': 'fake-1',
     'path': '/media/fake/1.wav',
     'real': false,
     'clip_object': 'vinyl4.playPause()',
     'clip_index': 4
   },
   {
+    'file': 'fake-2',
     'path': '/media/fake/2.wav',
     'real': false,
     'clip_object': 'vinyl5.playPause()',
     'clip_index': 5
   },
   {
+    'file': 'fake-3',
     'path': '/media/fake/3.wav',
     'real': false,
     'clip_object': 'vinyl6.playPause()',
     'clip_index': 6
   },
   {
+    'file': 'fake-4',
     'path': '/media/fake/4.wav',
     'real': false,
     'clip_object': 'vinyl7.playPause()',
