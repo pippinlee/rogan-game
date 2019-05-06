@@ -3,7 +3,7 @@ $(function(){
   // audio-card scripts
 
   vinyl0 = {
-    song: new Audio('media/real/JREa714-0008.wav'),
+    song: new Audio('media/real/1.wav'),
 
     playPause : function() {
         if($('.q0 #cover a').hasClass('play')) {
@@ -32,7 +32,7 @@ $(function(){
   };
 
   vinyl1 = {
-    song: new Audio('media/real/JREa564-0042.wav'),
+    song: new Audio('media/real/2.wav'),
 
     playPause : function() {
         if($('.q1 #cover a').hasClass('play')) {
@@ -61,7 +61,7 @@ $(function(){
   };
 
   vinyl2 = {
-    song: new Audio('media/real/JREa691-0007.wav'),
+    song: new Audio('media/real/3.wav'),
 
     playPause : function() {
         if($('.q2 #cover a').hasClass('play')) {
@@ -90,7 +90,7 @@ $(function(){
   };
 
   vinyl3 = {
-    song: new Audio('media/real/JREa884-0011.wav'),
+    song: new Audio('media/real/4.wav'),
 
     playPause : function() {
         if($('.q3 #cover a').hasClass('play')) {
@@ -306,28 +306,28 @@ $(function(){
 var listOfClips = [
   {
     'file': 'real-1',
-    'path': '/media/real/JREa714-0008.wav',
+    'path': '/media/real/1.wav',
     'real': true,
     'clip_object': 'vinyl0.playPause()',
     'clip_index': 0
   },
   {
     'file': 'real-2',
-    'path': '/media/real/JREa564-0042.wav',
+    'path': '/media/real/2.wav',
     'real': true,
     'clip_object': 'vinyl1.playPause()',
     'clip_index': 1
   },
   {
     'file': 'real-3',
-    'path': '/media/real/JREa691-0007.wav',
+    'path': '/media/real/3.wav',
     'real': true,
     'clip_object': 'vinyl2.playPause()',
     'clip_index': 2
   },
   {
     'file': 'real-4',
-    'path': '/media/real/JREa884-0011.wav',
+    'path': '/media/real/4.wav',
     'real': true,
     'clip_object': 'vinyl3.playPause()',
     'clip_index': 3
