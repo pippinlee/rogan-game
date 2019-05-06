@@ -3,7 +3,7 @@ $(function(){
   // audio-card scripts
 
   vinyl0 = {
-    song: new Audio('media/real/1.wav'),
+    song: new Audio('media/real/JREa714-0008.wav'),
 
     playPause : function() {
         if($('.q0 #cover a').hasClass('play')) {
@@ -32,7 +32,7 @@ $(function(){
   };
 
   vinyl1 = {
-    song: new Audio('media/real/2.wav'),
+    song: new Audio('media/real/JREa564-0042.wav'),
 
     playPause : function() {
         if($('.q1 #cover a').hasClass('play')) {
@@ -61,7 +61,7 @@ $(function(){
   };
 
   vinyl2 = {
-    song: new Audio('media/real/3.wav'),
+    song: new Audio('media/real/JREa884-0011.wav'),
 
     playPause : function() {
         if($('.q2 #cover a').hasClass('play')) {
@@ -90,7 +90,7 @@ $(function(){
   };
 
   vinyl3 = {
-    song: new Audio('media/real/4.wav'),
+    song: new Audio('media/real/JREa884-0011.wav'),
 
     playPause : function() {
         if($('.q3 #cover a').hasClass('play')) {
