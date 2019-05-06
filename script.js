@@ -273,7 +273,6 @@ $(function(){
     correctHTML = '<img class="answer-icon" src="./media/images/checkmark.svg"/> Correct!'
     incorrectHTML = '<img class="answer-icon" src="./media/images/cross.svg"/> Nope!'
     filename = $(this).attr("class");
-    console.log(filename)
 
     if (!selectedStatus && (button0Status || button1Status)) {
       $(this).toggleClass('selected')
