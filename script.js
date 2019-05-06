@@ -61,7 +61,7 @@ $(function(){
   };
 
   vinyl2 = {
-    song: new Audio('media/real/JREa884-0011.wav'),
+    song: new Audio('media/real/JREa691-0007.wav'),
 
     playPause : function() {
         if($('.q2 #cover a').hasClass('play')) {
