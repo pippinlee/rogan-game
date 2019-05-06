@@ -306,28 +306,28 @@ $(function(){
 var listOfClips = [
   {
     'file': 'real-1',
-    'path': '/media/real/1.wav',
+    'path': '/media/real/JREa714-0008.wav',
     'real': true,
     'clip_object': 'vinyl0.playPause()',
     'clip_index': 0
   },
   {
     'file': 'real-2',
-    'path': '/media/real/2.wav',
+    'path': '/media/real/JREa564-0042.wav',
     'real': true,
     'clip_object': 'vinyl1.playPause()',
     'clip_index': 1
   },
   {
     'file': 'real-3',
-    'path': '/media/real/3.wav',
+    'path': '/media/real/JREa691-0007.wav',
     'real': true,
     'clip_object': 'vinyl2.playPause()',
     'clip_index': 2
   },
   {
     'file': 'real-4',
-    'path': '/media/real/4.wav',
+    'path': '/media/real/JREa884-0011.wav',
     'real': true,
     'clip_object': 'vinyl3.playPause()',
     'clip_index': 3
