@@ -93,6 +93,7 @@ content {
     width: 550px;
     border: 4px solid #FFB463;
     padding: 30px;
+    padding-bottom: 0;
   }
   content h3 a {
     text-decoration-color: #FFB463;
