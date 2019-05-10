@@ -1,3 +1,8 @@
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0 auto;
   padding: 0;
@@ -279,9 +284,6 @@ body #cover a #play:before {
   transition: margin .2s;
 }
 body #cover a #play {
-  /* -webkit-transform: rotate(-90deg) skewX(-30deg) scale(1, 0.866);
-  -moz-transform: rotate(-90deg) skewX(-30deg) scale(1, 0.866);
-  transform: rotate(-90deg) skewX(-30deg) scale(1, 0.866); */
   opacity: .6;
   -webkit-transition: opacity .2s, top .2s;
   transition: opacity .2s, top .2s;
