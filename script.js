@@ -237,11 +237,11 @@ $(function(){
   for (var i=0; i < shuffledListOfClips.length;i++){
     var buttonCreation;
     if (shuffledListOfClips[i].real === true) {
-      buttonCreation = `<button class="${shuffledListOfClips[i].file}-correct" id="correct">Joe Rogan</button>
-      <button id="wrong" class="${shuffledListOfClips[i].file}-wrong">Faux Rogan</button>`
+      buttonCreation = `<button class="${shuffledListOfClips[i].file}-correct" id="correct">Real 真</button>
+      <button id="wrong" class="${shuffledListOfClips[i].file}-wrong">Fake 假</button>`
     } else {
-      buttonCreation = `<button class="${shuffledListOfClips[i].file}-wrong" id="wrong">Joe Rogan</button>
-      <button id="correct" class="${shuffledListOfClips[i].file}-correct">Faux Rogan</button>`
+      buttonCreation = `<button class="${shuffledListOfClips[i].file}-wrong" id="wrong">Real 真</button>
+      <button id="correct" class="${shuffledListOfClips[i].file}-correct">Fake 假</button>`
     }
     $('ul').append(`<li class="flex-items q${shuffledListOfClips[i].clip_index}">
     <section id="container">
