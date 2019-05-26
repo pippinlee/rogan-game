@@ -3,7 +3,7 @@ $(function(){
   // audio-card scripts
 
   vinyl0 = {
-    song: new Audio('media/real/1.wav'),
+    song: new Audio('../media/real/1.wav'),
 
     playPause : function() {
         if($('.q0 #cover a').hasClass('play')) {
@@ -32,7 +32,7 @@ $(function(){
   };
 
   vinyl1 = {
-    song: new Audio('media/real/2.wav'),
+    song: new Audio('../media/real/2.wav'),
 
     playPause : function() {
         if($('.q1 #cover a').hasClass('play')) {
@@ -61,7 +61,7 @@ $(function(){
   };
 
   vinyl2 = {
-    song: new Audio('media/real/3.wav'),
+    song: new Audio('../media/real/3.wav'),
 
     playPause : function() {
         if($('.q2 #cover a').hasClass('play')) {
@@ -90,7 +90,7 @@ $(function(){
   };
 
   vinyl3 = {
-    song: new Audio('media/real/4.wav'),
+    song: new Audio('../media/real/4.wav'),
 
     playPause : function() {
         if($('.q3 #cover a').hasClass('play')) {
@@ -119,7 +119,7 @@ $(function(){
   };
 
   vinyl4 = {
-    song: new Audio('media/fake/1.wav'),
+    song: new Audio('../media/fake/1.wav'),
 
     playPause : function() {
         if($('.q4 #cover a').hasClass('play')) {
@@ -148,7 +148,7 @@ $(function(){
   };
 
   vinyl5 = {
-    song: new Audio('media/fake/2.wav'),
+    song: new Audio('../media/fake/2.wav'),
 
     playPause : function() {
         if($('.q5 #cover a').hasClass('play')) {
@@ -177,7 +177,7 @@ $(function(){
   };
 
   vinyl6 = {
-    song: new Audio('media/fake/3.wav'),
+    song: new Audio('../media/fake/3.wav'),
 
     playPause : function() {
         if($('.q6 #cover a').hasClass('play')) {
@@ -206,7 +206,7 @@ $(function(){
   };
 
   vinyl7 = {
-    song: new Audio('media/fake/4.wav'),
+    song: new Audio('../media/fake/4.wav'),
 
     playPause : function() {
         if($('.q7 #cover a').hasClass('play')) {
@@ -270,8 +270,8 @@ $(function(){
     selectedStatus = $(this).hasClass('selected')
     selectedAnswerBox = $(this).parent().siblings()[1]
     answeredAlready = $(selectedAnswerBox).html()
-    correctHTML = '<img class="answer-icon" src="./media/images/checkmark.svg"/> Correct!'
-    incorrectHTML = '<img class="answer-icon" src="./media/images/cross.svg"/> Nope!'
+    correctHTML = '<img class="answer-icon" src="../media/images/checkmark.svg"/> Correct 正確'
+    incorrectHTML = '<img class="answer-icon" src="../media/images/cross.svg"/> Incorrect 錯誤'
     filename = $(this).attr("class");
 
     if (!selectedStatus && (button0Status || button1Status)) {
@@ -305,56 +305,56 @@ $(function(){
 var listOfClips = [
   {
     'file': 'real-1',
-    'path': '/media/real/1.wav',
+    'path': '../media/real/1.wav',
     'real': true,
     'clip_object': 'vinyl0.playPause()',
     'clip_index': 0
   },
   {
     'file': 'real-2',
-    'path': '/media/real/2.wav',
+    'path': '../media/real/2.wav',
     'real': true,
     'clip_object': 'vinyl1.playPause()',
     'clip_index': 1
   },
   {
     'file': 'real-3',
-    'path': '/media/real/3.wav',
+    'path': '../media/real/3.wav',
     'real': true,
     'clip_object': 'vinyl2.playPause()',
     'clip_index': 2
   },
   {
     'file': 'real-4',
-    'path': '/media/real/4.wav',
+    'path': '../media/real/4.wav',
     'real': true,
     'clip_object': 'vinyl3.playPause()',
     'clip_index': 3
   },
   {
     'file': 'fake-1',
-    'path': '/media/fake/1.wav',
+    'path': '../media/fake/1.wav',
     'real': false,
     'clip_object': 'vinyl4.playPause()',
     'clip_index': 4
   },
   {
     'file': 'fake-2',
-    'path': '/media/fake/2.wav',
+    'path': '../media/fake/2.wav',
     'real': false,
     'clip_object': 'vinyl5.playPause()',
     'clip_index': 5
   },
   {
     'file': 'fake-3',
-    'path': '/media/fake/3.wav',
+    'path': '../media/fake/3.wav',
     'real': false,
     'clip_object': 'vinyl6.playPause()',
     'clip_index': 6
   },
   {
     'file': 'fake-4',
-    'path': '/media/fake/4.wav',
+    'path': '../media/fake/4.wav',
     'real': false,
     'clip_object': 'vinyl7.playPause()',
     'clip_index': 7
